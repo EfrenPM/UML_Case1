@@ -1,23 +1,23 @@
 #Creando Base de Datos
 database = []
 # Código en Python (Signin)
-def signin(user):
-  user = {
-    'userId' = '55_323_405_DC'
-    'username' = 'Pepe'
-    'password' = '1234Pepe1'
-    'email' = 'example@email.com'
+def signin():
+    user = {
+        "userId" : "55_323_405_DC",
+        "username" : "Pepe",
+        "password" : "1234Pepe1",
+        "email" : "example@email.com"
     }
-  validate_user = False
+    validate_user = False
 
-  if user in database:
-    return False
+    if user in database:
+        return False
     
-  if isinstance(user.values(), str) and 8 >= len(user[username]) <= 10:
-      database.append(user)
-      validate_user = True
+    if isinstance(user.values(), str) and 8 >= len(user["username"]) <= 10:
+        database.append(user)
   #usuario validao
-  return validate_user 
+        validate_user = True
+    return validate_user 
 
 #def validate_credentials(user):
  # if isinstance(user.values(), str) and 8 >= len(user[username]) <= 10:
