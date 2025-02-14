@@ -26,17 +26,20 @@ database = [
     {"userId": str(len(database + 1)).zfill(10), "username": "Pepe Morales", "password": "1234Pepe1", "email": "example@email.com"}
 ]
 
-activesessions = list(user["userId"])
+active_sessions = []
 
 # Código en Python (Login)
-def login(active_user: dict[str, str]):
-    # Verificamos, por ejemplo, si el usuario y la contraseña coinciden con alguno de los usuarios ya almacenados
+def login(active_user: dict[str, str]) -> bool:
     for existing_user in database:
-        if existing_user["username"] == user["username"] and existing_user["password"] == user["password"]:
+        if existing_user["username"] == active_user["username"] and existing_user["password"] == active_user["password"]:
+            active_sessions.append(existing_user["userId"])
             return True  # Login exitoso
-    return False  # Login fallido. Esto ocurre porque no encuentra ninguna coincidencia
-    activesessions.append[active_user]
+    return False # Logout fallido
 
 # Código en Python (Logout)
-def logout():
-    return activessesions.remove(active_user)
+def logout(active_sessions: list[str], user_id: str) -> bool:
+    active_sessions.remove(user_id)
+    return True
+
+# Hacer un menú con las opciones: signin, login, logout
+# Construir diversas condiciones (te explicaré más adelante)
