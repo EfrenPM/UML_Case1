@@ -29,7 +29,7 @@ database = [
 activesessions = list(user["userId"])
 
 # Código en Python (Login)
-def login(active_user: dict[str, str]) -> bool:
+def login(active_user: dict[str, str]):
     # Verificamos, por ejemplo, si el usuario y la contraseña coinciden con alguno de los usuarios ya almacenados
     for existing_user in database:
         if existing_user["username"] == user["username"] and existing_user["password"] == user["password"]:
