@@ -3,7 +3,7 @@ database = [] # En el ejemplo está vacía, pero realmente hay miles de usuarios
 # Código en Python (Signin)
 def signin(user: dict[str, str]) -> bool:
     user = {
-        "userId" : "55_223_405_DC",
+        "userId" : str(len(database + 1)).zfill(10),
         "username" : "Pepe Morales",
         "password" : "1234Pepe1",
         "email" : "example@email.com"
