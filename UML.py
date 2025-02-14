@@ -23,16 +23,20 @@ def signin(user: dict[str, str]) -> bool:
     
 # El usuario ya ha sido registrado en la base de datos
 database = [
-    {"userId": "55_223_405_DC", "username": "Pepe Morales", "password": "1234Pepe1", "email": "example@email.com"}
+    {"userId": str(len(database + 1)).zfill(10), "username": "Pepe Morales", "password": "1234Pepe1", "email": "example@email.com"}
 ]
 
+activesessions = list(user["userId"])
+
 # Código en Python (Login)
-def login(user: dict[str, str]) -> bool:
+def login(active_user: dict[str, str]) -> bool:
     # Verificamos, por ejemplo, si el usuario y la contraseña coinciden con alguno de los usuarios ya almacenados
     for existing_user in database:
         if existing_user["username"] == user["username"] and existing_user["password"] == user["password"]:
             return True  # Login exitoso
     return False  # Login fallido. Esto ocurre porque no encuentra ninguna coincidencia
+    activesessions.append[active_user]
 
 # Código en Python (Logout)
 def logout():
+    return activessesions.remove(active_user)
