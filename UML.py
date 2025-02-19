@@ -42,15 +42,19 @@ def logout(user_id: str) -> bool:
         active_sessions.remove(user_id)
         return True  # Logout exitoso
     return False  # Logout fallido
-    
+
+
+# Hacer un menú con las opciones: signin, login, logout
+# Construir diversas condiciones (te explicaré más adelante)
+
+
 # Función principal para el menú
 def main_menu():
     while True:
         print('\n--- Menú ---')
         print('1. Signin')
         print('2. Login')
-        print('3. Salir')
-        option = input('Seleccione una opción (1-3): ')
+        option = input('Seleccione una opción (1-2): ')
 
         if option == '1':
             username = input('Ingrese su nombre de usuario: ')
@@ -77,13 +81,24 @@ def main_menu():
                 print(f'Usuario {username} ha iniciado sesión.')
             else:
                 print(f'Error: Credenciales incorrectas para el usuario {username}.')
-        
-        elif option == '3':
-            print('Saliendo del programa...')
-            break
 
         else:
             print('Opción no válida. Intente de nuevo.')
+
+
+            #elif option == '3':
+            #if active_sessions:
+            #    print('Sesiones activas:')
+            #    for session in active_sessions:
+            #        print(f'ID de Usuario: {session}')
+            #    user_id = input('Ingrese su ID de usuario para cerrar sesión: ')
+            #    if logout(user_id):
+            #        print(f'Usuario con ID {user_id} ha cerrado sesión.')
+            #    else:
+            #        print(f'Error: No se pudo cerrar sesión para el ID de usuario {user_id}.')
+            #else:
+            #    print('No hay sesiones activas.')
+                
 
 # Ejecución del menú
 if __name__ == '__main__':
