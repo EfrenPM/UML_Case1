@@ -43,11 +43,6 @@ def logout(user_id: str) -> bool:
         return True  # Logout exitoso
     return False  # Logout fallido
 
-
-# Hacer un menú con las opciones: signin, login, logout
-# Construir diversas condiciones (te explicaré más adelante)
-
-
 # Función principal para el menú
 def main_menu():
     while True:
