@@ -93,7 +93,7 @@ def main_menu():
                 else:
                     print(f'Error: Credenciales incorrectas para el usuario {username}.')
 
-            # Si no seleccionamos ni 1 ni 2, salatará un error
+            # Si no seleccionamos ni 1 ni 2, saltará un error
             else:
                 print('Error: Opción no válida, pruebe de nuevo.')
 
@@ -116,7 +116,7 @@ def main_menu():
                 print('Saliendo del sistema...')
                 break
 
-            # Si no seleccionamos ni 1 ni 2, salatará un error
+            # Si no seleccionamos ni 1 ni 2, saltará un error
             else:
                 print('Error: Opción no válida, pruebe de nuevo.')
 
