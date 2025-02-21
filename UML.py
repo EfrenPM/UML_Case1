@@ -127,7 +127,7 @@ def main_menu():
                 }
                 user_id = signin(user_data)
                 if user_id:
-                    print(f'\nUsuario {username} registrado exitosamente con ID: {user_id}.\nAnote su ID porque le será imprescindible para poder cerrar sesión.')
+                    print(f'\nUsuario {username} registrado exitosamente con ID: {user_id}.')
                 else:
                     print(f'\nError: El usuario {username} ya existe o la validación falló.')
 
@@ -163,7 +163,6 @@ def main_menu():
             # Si seleccionamos 2, se ejecutará la salida del programa
             elif option == '2':
                 print('Saliendo del sistema...')
-                break
 
             # Si no seleccionamos ni 1 ni 2, saltará un error
             else:
